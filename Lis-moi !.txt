@@ -1,0 +1,16 @@
+Mettre le dossier Minitel-master dans C:\Program Files (x86)\Arduino\libraries avant d'ouvrir MiniPong.ino
+
+Par défaut le programme fonctionne en 1200 bauds :
+Pour le passer en 4800 bauds et avoir un jeu plus fluide il faut remplacer :
+
+Serial.begin(1200);
+
+begin(1200);
+
+par :
+
+Serial.begin(4800);
+
+begin(4800);
+
+dans Minitel.cpp dans le dossier Minitel-master.
