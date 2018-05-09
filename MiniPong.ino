@@ -7,7 +7,7 @@ int Y = 0;      //Emplacement de la raquette du joueur 1
 int Z = 0;      //Emplacement de la raquette du joueur 1
 int ballx = 0;  //Position horizontale de la balle
 int bally = 0;  //Position vertical de la balle
-int d = 1;      //Dirrection de la balle
+int d = 1;      //Direction de la balle
 int pa = 0;     //Points du joueur 1
 int pb = 0;     //Points du joueur 2
 int menu = 1;   //Emplacement du curseur sur le menu
@@ -170,7 +170,7 @@ void solo() {
     bg();
   }
   if(d == 4){
-    hg();       //Dirrection de la balle
+    hg();       //Direction de la balle
   }
 
   if(bally == 2){
@@ -180,7 +180,7 @@ void solo() {
     if(d == 4){
       d = 3;
     }
-    m.bip(200);   //Changement de dirrection lorsque la balle touche le mur du haut + bip
+    m.bip(200);   //Changement de direction lorsque la balle touche le mur du haut + bip
   }
 
   if(bally == 23){
@@ -190,7 +190,7 @@ void solo() {
     if(d == 2){
       d = 1;
     }
-    m.bip(200);   //Changement de dirrection lorsque la balle touche le mur du bas + bip
+    m.bip(200);   //Changement de direction lorsque la balle touche le mur du bas + bip
   }
 
   if(set == 1){
@@ -201,7 +201,7 @@ void solo() {
       }
       if(d == 3){
         d = 2;
-      }                           //Changement de dirrection lorsque la balle touche la raquette 
+      }                           //Changement de direction lorsque la balle touche la raquette 
       pb++;
       String A = String(pb);
       m.textMode();
@@ -351,7 +351,7 @@ void multi() {
   }
   if(d == 4){
     hg();
-  }             //Dirrection de la balle
+  }             //Direction de la balle
 
   if(bally == 2){
     if(d == 1){
@@ -512,22 +512,22 @@ void multi() {
   }
 }
 
-void hd() {           //Dirrection de la balle Haut Droite
+void hd() {           //Direction de la balle Haut Droite
   ballx = ballx + 2;
   bally--;
 }
 
-void bd() {           //Dirrection de la balle Bas Droite
+void bd() {           //Direction de la balle Bas Droite
   ballx = ballx + 2;
   bally++;
 }
 
-void bg() {           //Dirrection de la balle Bas Gauche
+void bg() {           //Direction de la balle Bas Gauche
   ballx = ballx - 2;
   bally++;
 }
 
-void hg() {           //Dirrection de la balle Haut Gauche
+void hg() {           //Direction de la balle Haut Gauche
   ballx = ballx - 2;
   bally--;
 }
